@@ -1,0 +1,107 @@
+{% extends 'layout.html' %} {% block content %}
+<section>
+  <div class="user_card">
+    <div class="user-data">
+      <img
+        src="{{image_file}}"
+        alt="avatar"
+        class="rounded-circle img-fluid"
+        style="width: 150px; margin-inline: auto"
+      />
+      <h1 style="text-align: center">
+        {{ current_user.first_name }} {{ current_user.last_name }}
+      </h1>
+      <a href="{{url_for('account')}}" style="all: unset">
+        <button type="button" class="button">Back</button>
+      </a>
+    </div>
+    <form method="POST" action="" enctype="multipart/form-data">
+      {{ form.hidden_tag() }}
+      <fieldset class="form-group">
+        <legend class="border-bottom mb-4">Account Info</legend>
+        <div class="form-group">
+          {{ form.username.label(class="form-control-label") }} {% if
+          form.username.errors %} {{ form.username(class="form-control
+          form-control-lg is-invalid") }}
+          <div class="invalid-feedback">
+            {% for error in form.username.errors %}
+            <span>{{ error }}</span>
+            {% endfor %}
+          </div>
+          {% else %} {{ form.username(class="form-control form-control-lg") }}
+          {% endif %}
+        </div>
+        <br />
+        <div class="form-group">
+          {{ form.first_name.label(class="form-control-label") }} {% if
+          form.first_name.errors %} {{ form.first_name(class="form-control
+          form-control-lg is-invalid") }}
+          <div class="invalid-feedback">
+            {% for error in form.first_name.errors %}
+            <span>{{ error }}</span>
+            {% endfor %}
+          </div>
+          {% else %} {{ form.first_name(class="form-control form-control-lg") }}
+          {% endif %}
+        </div>
+        <br />
+        <div class="form-group">
+          {{ form.last_name.label(class="form-control-label") }} {% if
+          form.last_name.errors %} {{ form.last_name(class="form-control
+          form-control-lg is-invalid") }}
+          <div class="invalid-feedback">
+            {% for error in form.last_name.errors %}
+            <span>{{ error }}</span>
+            {% endfor %}
+          </div>
+          {% else %} {{ form.last_name(class="form-control form-control-lg") }}
+          {% endif %}
+        </div>
+        <br />
+        <div class="form-group">
+          {{ form.phone_number.label(class="form-control-label") }} {% if
+          form.phone_number.errors %} {{ form.phone_number(class="form-control
+          form-control-lg is-invalid") }}
+          <div class="invalid-feedback">
+            {% for error in form.phone_number.errors %}
+            <span>{{ error }}</span>
+            {% endfor %}
+          </div>
+          {% else %} {{ form.phone_number(class="form-control form-control-lg")
+          }} {% endif %}
+        </div>
+        <br />
+        <div class="form-group">
+          {{ form.address.label(class="form-control-label") }} {% if
+          form.address.errors %} {{ form.address(class="form-control
+          form-control-lg is-invalid") }}
+          <div class="invalid-feedback">
+            {% for error in form.address.errors %}
+            <span>{{ error }}</span>
+            {% endfor %}
+          </div>
+          {% else %} {{ form.address(class="form-control form-control-lg") }} {%
+          endif %}
+        </div>
+        <br />
+        <div class="form-group">
+          {{ form.email.label(class="form-control-label") }} {% if
+          form.email.errors %} {{ form.email(class="form-control form-control-lg
+          is-invalid") }}
+          <div class="invalid-feedback">
+            {% for error in form.email.errors %}
+            <span>{{ error }}</span>
+            {% endfor %}
+          </div>
+          {% else %} {{ form.email(class="form-control form-control-lg") }} {%
+          endif %}
+        </div>
+        <br />
+      </fieldset>
+      <div class="form-group d-flex justify-content-center">
+        {{ form.submit(class="button") }}
+      </div>
+    </form>
+  </div>
+</section>
+{% endblock %}

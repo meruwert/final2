@@ -1,0 +1,51 @@
+{% extends 'layout.html' %} {% block content %}
+<section>
+  <div class="user_card">
+      <div class="user-data">
+        <img
+          src="{{image_file}}"
+          alt="avatar"
+          class="rounded-circle img-fluid"
+          style="width: 150px; margin-inline: auto;"
+
+        />
+        <h1 style="text-align: center;">{{ user.first_name }} {{ user.last_name }}</h1>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <h2><strong>Username </strong></h2>
+
+          <h2>{{ user.username}}</h2>
+        </div>
+        <hr />
+        <div class="row">
+          <h2><strong>First name</strong></h2>
+
+          <h2>{{ user.first_name }}</h2>
+        </div>
+        <hr />
+        <div class="row">
+          <h2><strong>Last name</strong></h2>
+
+          <h2>{{ user.last_name }}</h2>
+        </div>
+        <hr />
+        <div class="row">
+          <h2><strong>Email</strong></h2>
+
+          <h2>{{ user.email }}</h2>
+        </div>
+        <hr />
+        <div class="row">
+          <h2><strong>Phone number</strong></h2>
+
+          {% if user.phone_number %}
+          <h2>{{ user.phone_number }}</h2>
+          {% else %}
+          <h2>Not setted</h2>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+</section>
+{% endblock %}
