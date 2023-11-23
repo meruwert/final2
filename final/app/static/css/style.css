@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all ease-in-out 0.3s;
+  background-color: white;
+
+   font-family: 'Old Standard TT', serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.logo {
+  text-decoration: none;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  mix-blend-mode: darken;
+}
+
+
+.container {
+  width: 75%;
+  margin-inline: auto;
+}
+
+.first-section {
+  display: flex;
+  justify-content: space-around;
+  margin: 70px 0;
+}
+
+.section-img {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 380px;
+  width: 500px;
+}
+
+.section-img img {
+  position: absolute;
+  height: auto;
+  width: 500px;
+}
+
+.f-text {
+  font-family: 'Rubik', sans-serif;
+  color: black;
+  flex: 0.7;
+  line-height: 30px;
+  font-size: 20px;
+}
+
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.card {
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  width: 13rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: 20rem;
+}
+
+.user_card{
+  width: 70%;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.user-data{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.book_img {
+  width: 140px;
+  height: auto;
+}
+
+fieldset {
+  background-color: white;
+  max-width: 500px;
+  padding: 16px;
+  border-radius: 15px;
+  border: solid 3px grey;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+legend {
+  margin-inline: 10px;
+  padding: 0 10px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"] {
+  all: unset;
+  border-radius: 15px;
+  padding: 5px 10px;
+  border: solid 1px grey;
+}
+
+textarea{
+  all: unset;
+  border-radius: 15px;
+  padding: 5px 10px;
+  border: solid 1px grey;
+}
+
+
+input[type="text"],
+input[type="number"],
+input[type="password"]:focus {
+  all: unset;
+  border-radius: 15px;
+  padding: 5px 10px;
+  border: solid 1px grey;
+}
+
+.button {
+  all: unset;
+  background-color: grey;
+  padding: 7px 10px;
+  border-radius: 7px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #007598;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 130px; /* Adjust the height to your preference */
+  width: auto; /* This will maintain the aspect ratio */
+  mix-blend-mode: darken;
+}
+
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.link-light {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
+}
+
+.nav-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.nav-buttons a img {
+    height: 40px;
+    width: auto;
+    mix-blend-mode: darken;
+}
+
+/* Optional: Add styles to customize the appearance of the cart icon */
+.link-light img {
+    filter: grayscale(100%);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  width: 60%; /* Adjusted width for better responsiveness */
+
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: grey; /* Light text color */
+   margin-right: 20px;
+   font-family: 'Rubik', sans-serif;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  color: #c0c0c0; /* Slightly darker text color on hover */
+}
+
+.card-title {
+    padding-right: 30px;
+  }

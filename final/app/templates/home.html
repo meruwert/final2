@@ -1,0 +1,52 @@
+{% extends 'layout.html' %} {% block content %}
+
+
+
+<section class="first-section">
+  <div class="section-img">
+    <img src="{{url_for('static', filename='img/70216635-0cc1-4da2-ba0e-2ae80c34bcd6.jpg')}}" >
+  </div>
+  <div class="f-text">
+    <p>
+      Welcome to <span> Klasi Books</span>, where the world of literature comes to
+      life. Immerse yourself in a treasure trove of captivating stories,
+      thought-provoking narratives, and literary adventures. Our carefully
+      curated collection spans genres and cultures, ensuring there's something
+      for every book lover. Discover the joy of reading at <span> Klasi</span>.
+    </p>
+
+  </div>
+</section>
+<section class="first-section">
+  <div class="f-text">
+    <p>
+      Explore Our Featured Books: Dive into a world of bestsellers, hidden gems,
+      and timeless classics. Our handpicked selection showcases the latest
+      releases alongside enduring favorites. Whether you're seeking thrilling
+      mysteries, heartwarming tales, or scholarly works, our featured books
+      capture the essence of great storytelling. Uncover literary treasures that
+      will transport you to different worlds and perspectives.
+    </p>
+  </div>
+  <div class="section-img">
+    <img src="{{url_for('static', filename='img/books1.jpg')}}" />
+  </div>
+</section>
+
+<section class="first-section">
+  <div class="section-img">
+    <img src="{{url_for('static', filename='img/2.jpg')}}" />
+  </div>
+  <div class="f-text">
+    <p>
+      Join Our Reading Community: At <span> Marwin</span>, we believe in the
+      power of shared stories. Connect with fellow book enthusiasts through our
+      reading groups, discussions, and events. Stay updated on the latest
+      literary happenings, author visits, and book launches. Embrace the sense
+      of community that comes from a shared love of reading. Your next great
+      literary adventure awaits – let's explore it together.
+    </p>
+  </div>
+</section>
+
+{% endblock %}
